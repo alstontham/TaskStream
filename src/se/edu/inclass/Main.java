@@ -78,7 +78,7 @@ public class Main {
         System.out.println("Printing deadlines using streams");
         tasksData.stream()
                 .filter((s) -> s instanceof Deadline)
-                .sorted((a, b) -> a.getDescription().toLowerCase().compareTo(b.getDescription().toLowerCase()))
+                .sorted((a, b) -> a.getDescription().toLowerCase().compareTo(b.getDescription()))
                 .forEach((System.out::println));
     }
 
@@ -88,5 +88,9 @@ public class Main {
                 .collect(toList());
 
         return filteredTaskList;
+    }
+
+    public static void testRun(int test) {
+        
     }
 }
